@@ -23,7 +23,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return response()->json(['user' => $user]);
+        return response()->json(['user' => $user]); // 登録成功時にユーザー情報を返す
     }
 
     public function login(Request $request)
